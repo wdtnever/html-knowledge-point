@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <style>
+        .no-sizes {
+            width: 320px;
+        }
+    </style>
+</head>
+<body>
+<img srcset="image/elva-fairy-320w.png 320w,
+             image/elva-fairy-480w.png 480w,
+             image/elva-fairy-800w.png 800w"
+    sizes="(max-width: 320px) 280px,
+           (max-width: 480px) 440px,
+           800px"
+    src="elva-fairy-800w.png" alt="Elva dressed as a fairy">
+
+<img srcset="image/elva-fairy-320w.png,
+             image/elva-fairy-480w.png 1.5x,
+             image/elva-fairy-800w.png 2x"
+     src="image/elva-fairy-800w.png"
+     class="no-sizes" alt="Elva dressed as a fairy">
+
+<picture>
+    <source media="(max-width: 799px)" srcset="image/elva-fairy-480w.png">
+    <source media="(min-width: 800px)" srcset="image/elva-fairy-800w.png">
+    <img src="image/elva-fairy-800w.png" alt="Elva dressed as a fairy">
+</picture>
+
+<picture>
+    <source type="image/svg+xml" srcset="pyramid.svg">
+    <source type="image/webp" srcset="pyramid.webp">
+    <img src="pyramid.png" alt="regular pyramid built from four equilateral triangles">
+</picture>
+
+</body>
+</html>
